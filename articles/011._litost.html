@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lítost | Vidím to jinak</title>
+  <title>Litost | Vidím to jinak</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?">
+  <meta name="keywords" content="edukace, nevidomí, handicap, realita bez filtru, Jan Šimek, osvěta">
+  <meta name="author" content="Jan Šimek">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vidimtojinak.cz/articles/011._litost.html">
 
-  gtag('config', 'G-FTQEHCE1DR');
-</script>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Litost | Vidím to jinak">
+  <meta property="og:description" content="Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?">
+  <meta property="og:url" content="https://vidimtojinak.cz/articles/011._litost.html">
+  <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTQEHCE1DR');
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -22,14 +33,11 @@
       --bg-dark: #020617;
       --accent-blue: #3b82f6;
     }
-
     body {
       background-color: var(--bg-dark);
       background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.2) 0px, transparent 50%);
       min-height: 100vh;
     }
-
-    /* Progress bar nahoře */
     #progress-bar {
       position: fixed;
       top: 0;
@@ -40,74 +48,29 @@
       z-index: 100;
       transition: width 0.1s;
     }
-
-    /* Typografie a odstavce */
-    .prose-custom p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      color: #cbd5e1; /* slate-300 */
-    }
-
-    /* První odstavec - "perex" */
+    .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; color: #cbd5e1; }
     .prose-custom p:first-of-type {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #f1f5f9; /* slate-100 */
-      line-height: 1.6;
-      border-left: 4px solid var(--accent-blue);
-      padding-left: 1.5rem;
-      margin-bottom: 2.5rem;
+      font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.6; border-left: 4px solid var(--accent-blue);
+      padding-left: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Nadpisy v článku */
     .prose-custom h2, .prose-custom h3 {
-      color: #f1f5f9;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+      margin-top: 3rem; margin-bottom: 1rem;
     }
-
     .prose-custom h2 { font-size: 1.875rem; }
     .prose-custom h3 { font-size: 1.5rem; }
-
-    /* Zvýraznění (tučný text) */
-    .prose-custom strong {
-      color: #f8fafc;
-      font-weight: 700;
-    }
-
-    /* TL;DR Box (Shrnutí) */
+    .prose-custom strong { color: #f8fafc; font-weight: 700; }
     .tldr-box {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
+      background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 1rem; padding: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Citace (ty nekorektní hlášky) */
     blockquote {
-      font-style: italic;
-      font-size: 1.2rem;
-      border-left: 4px solid #ef4444; /* Červená pro důraz */
-      background: rgba(239, 68, 68, 0.05);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      color: #fca5a5;
+      font-style: italic; font-size: 1.2rem; border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05); padding: 1.5rem; margin: 2rem 0; color: #fca5a5;
     }
-
-    /* Odrážky */
-    .prose-custom ul {
-      margin-bottom: 1.5rem;
-      list-style-type: none;
-    }
-
-    .prose-custom li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
+    .prose-custom ul { margin-bottom: 1.5rem; list-style-type: none; }
+    .prose-custom li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
   </style>
 </head>
 
@@ -126,13 +89,12 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-4 pb-20 pt-12">
-
     <header class="mb-12">
       <h1 class="text-4xl sm:text-5xl font-black mb-4 leading-tight tracking-tighter">
-        Lítost
+        Litost
       </h1>
       <div class="flex items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-        <span>Publikováno: <time>24. 04. 2026</time></span>
+        <span>Publikováno: <time>25. 04. 2026</time></span>
         <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
         <span>Čtení na 5 minut</span>
       </div>
@@ -141,15 +103,15 @@
     <div class="tldr-box">
       <h4 class="text-blue-400 font-black text-xs uppercase tracking-[0.2em] mb-3">Shrnutí pro lidi v presu</h4>
       <p class="text-slate-300 text-sm leading-relaxed italic">
-        **Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?**
+        Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?
       </p>
     </div>
 
     <article id="article-content" class="prose-custom max-w-none">
-      <h3>Lítost je pro mě urážka, ne pomoc</h3>
-<p> 👀 Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?**</p>
-<p> Představte si situaci: Jdete po ulici, orientujete se bílou holí a v hlavě si procházíte nákupní lístek. Najednou vás někdo zastaví a místo pozdravu spustí: „Panebože, vy jste takový chudák, já vás tak lituji!“ Vy odpovíte, že se máte fajn, ale dotyčný už tahá kapesník, jako byste mu právě oznámili konec světa.</p>
-<p> "Lítost je pro mnohé z nás urážka všeho, co jsme dokázali. Je to zpochybnění naší existence jako svéprávných lidí."</p>
+      <p> Lítost</p>
+<p> 👀 Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?</p>
+<h3>Lítost je pro mě urážka, ne pomoc</h3>
+<p> 👀 Lidé si myslí, že nás svým soucitem zachraňují, ale ve skutečnosti nad námi jen veřejně lámou hůl. Proč vaše slzy nepomáhají a jak vypadá rozdíl mezi pochopením a ponižováním?** Představte si situaci: Jdete po ulici, orientujete se bílou holí a v hlavě si procházíte nákupní lístek. Najednou vás někdo zastaví a místo pozdravu spustí: „Panebože, vy jste takový chudák, já vás tak lituji!“ Vy odpovíte, že se máte fajn, ale dotyčný už tahá kapesník, jako byste mu právě oznámili konec světa. "Lítost je pro mnohé z nás urážka všeho, co jsme dokázali. Je to zpochybnění naší existence jako svéprávných lidí."</p>
 <h2>**Výměna svéprávnosti za kapesník**</h2>
 <p> Většina lidí to myslí dobře. Vidí handicap a automaticky si dosadí rovnici: Slepota = Neštěstí. Jenže zatímco vy nás litujete, my normálně žijeme, pracujeme a staráme se o rodiny. Lítost mezi nás staví zeď. Vy jste ti „šťastní“ a my jsme ti „chudáčci“, co bez vás netrefí ani pro ty rohlíky.</p>
 <h3>**Scénář B: Když to vygraduje v metro-horor**</h3>
@@ -163,8 +125,7 @@
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>**Výsledek:** Paní se začne smát a přizná, že jí ta původní lítost najednou přijde trapná.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>**Bonus:** Dozví se, že existuje drink jménem Zetor (zelená, tonik, rum), a odchází s pocitem, že svět nevidomých není temná díra, ale prostě jen jiný operační systém.</span></div>
 <h2>**Závěr**</h2>
-<p> "Nežijeme v jiném světě. Žijeme ve stejném světě jako vy, jen ho vnímáme odlišným způsobem."</p>
-<p> Až příště potkáte handicapovaného, zkuste tuhle revoluční věc:</p>
+<p> "Nežijeme v jiném světě. Žijeme ve stejném světě jako vy, jen ho vnímáme odlišným způsobem." Až příště potkáte handicapovaného, zkuste tuhle revoluční věc:</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Nelitujte ho.**</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Berte ho jako parťáka.**</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Klidně se zeptejte, jak věci zvládá, místo abyste nad ním brečeli.**</span></div>
@@ -175,17 +136,39 @@
     <footer class="mt-16 pt-8 border-t border-slate-800">
       <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-6 text-center">
         <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za pozornost.</p>
-        <p class="text-slate-400 text-sm mb-4 italic">Líbil se vám článek? Pokud ano, sdílejte ho prosím.</p>
+        <p class="text-slate-400 text-sm mb-4 italic">Svět nevidomých není černobílý. Pokud vám článek přišel fajn, sdílejte ho – pomůžete mi šířit osvětu, která nebolí.</p>
         <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
           Zpět na hlavní stránku
         </a>
       </div>
     </footer>
-
   </main>
 
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-sm bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl z-[100] hidden">
+    <div class="flex items-start gap-4">
+      <div class="text-2xl">🍪</div>
+      <div>
+        <h4 class="text-white font-bold mb-1 text-sm uppercase tracking-wider">Bereme si sušenky</h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Používáme jen základní cookies, abychom věděli, že sem vůbec někdo chodí. Žádný šmírování.
+        </p>
+        <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest py-2 px-4 rounded-full transition-all">
+          V pořádku
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Skript pro progress bar
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
     window.onscroll = function() {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -193,6 +176,5 @@
       document.getElementById("progress-bar").style.width = scrolled + "%";
     };
   </script>
-
 </body>
 </html>

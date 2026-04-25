@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prosím tě, rozsviť si. (Nebo radši ne?¨) | Vidím to jinak</title>
+  <title>Rozsvit si | Vidím to jinak</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="Přijdete na návštěvu k nevidomému a v celém bytě je černočerná tma. Vaše první reakce? Šok a hledání vypínače. Proč si nevidomí doma nesvítí a proč je pro nás tma vlastně docela úsporný kámoš?">
+  <meta name="keywords" content="edukace, nevidomí, handicap, realita bez filtru, Jan Šimek, osvěta">
+  <meta name="author" content="Jan Šimek">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vidimtojinak.cz/articles/015._rozsvit_si.html">
 
-  gtag('config', 'G-FTQEHCE1DR');
-</script>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Rozsvit si | Vidím to jinak">
+  <meta property="og:description" content="Přijdete na návštěvu k nevidomému a v celém bytě je černočerná tma. Vaše první reakce? Šok a hledání vypínače. Proč si nevidomí doma nesvítí a proč je pro nás tma vlastně docela úsporný kámoš?">
+  <meta property="og:url" content="https://vidimtojinak.cz/articles/015._rozsvit_si.html">
+  <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTQEHCE1DR');
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -22,14 +33,11 @@
       --bg-dark: #020617;
       --accent-blue: #3b82f6;
     }
-
     body {
       background-color: var(--bg-dark);
       background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.2) 0px, transparent 50%);
       min-height: 100vh;
     }
-
-    /* Progress bar nahoře */
     #progress-bar {
       position: fixed;
       top: 0;
@@ -40,74 +48,29 @@
       z-index: 100;
       transition: width 0.1s;
     }
-
-    /* Typografie a odstavce */
-    .prose-custom p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      color: #cbd5e1; /* slate-300 */
-    }
-
-    /* První odstavec - "perex" */
+    .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; color: #cbd5e1; }
     .prose-custom p:first-of-type {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #f1f5f9; /* slate-100 */
-      line-height: 1.6;
-      border-left: 4px solid var(--accent-blue);
-      padding-left: 1.5rem;
-      margin-bottom: 2.5rem;
+      font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.6; border-left: 4px solid var(--accent-blue);
+      padding-left: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Nadpisy v článku */
     .prose-custom h2, .prose-custom h3 {
-      color: #f1f5f9;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+      margin-top: 3rem; margin-bottom: 1rem;
     }
-
     .prose-custom h2 { font-size: 1.875rem; }
     .prose-custom h3 { font-size: 1.5rem; }
-
-    /* Zvýraznění (tučný text) */
-    .prose-custom strong {
-      color: #f8fafc;
-      font-weight: 700;
-    }
-
-    /* TL;DR Box (Shrnutí) */
+    .prose-custom strong { color: #f8fafc; font-weight: 700; }
     .tldr-box {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
+      background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 1rem; padding: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Citace (ty nekorektní hlášky) */
     blockquote {
-      font-style: italic;
-      font-size: 1.2rem;
-      border-left: 4px solid #ef4444; /* Červená pro důraz */
-      background: rgba(239, 68, 68, 0.05);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      color: #fca5a5;
+      font-style: italic; font-size: 1.2rem; border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05); padding: 1.5rem; margin: 2rem 0; color: #fca5a5;
     }
-
-    /* Odrážky */
-    .prose-custom ul {
-      margin-bottom: 1.5rem;
-      list-style-type: none;
-    }
-
-    .prose-custom li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
+    .prose-custom ul { margin-bottom: 1.5rem; list-style-type: none; }
+    .prose-custom li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
   </style>
 </head>
 
@@ -126,13 +89,12 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-4 pb-20 pt-12">
-
     <header class="mb-12">
       <h1 class="text-4xl sm:text-5xl font-black mb-4 leading-tight tracking-tighter">
-        Prosím tě, rozsviť si. (Nebo radši ne?)
+        Rozsvit si
       </h1>
       <div class="flex items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-        <span>Publikováno: <time>24. 04. 2026</time></span>
+        <span>Publikováno: <time>25. 04. 2026</time></span>
         <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
         <span>Čtení na 5 minut</span>
       </div>
@@ -146,18 +108,14 @@
     </div>
 
     <article id="article-content" class="prose-custom max-w-none">
-      <p> Prosím tě, rozsviť si! (Nebo radši ne?)</p>
+      <p> Prosím tě, rozsviť si. (Nebo radši ne?)</p>
 <p> 👀 Přijdete na návštěvu k nevidomému a v celém bytě je černočerná tma. Vaše první reakce? Šok a hledání vypínače. Proč si nevidomí doma nesvítí a proč je pro nás tma vlastně docela úsporný kámoš?</p>
-<p> Představte si tu situaci: Večer zazvoníte u nevidomého kamaráda, on vám otevře, pozve vás dál, ale uvnitř je tma jako v pytli. Automaticky vyhrknete: „Ty bláho, ty tu máš ale tmu! Proč si nerozsvítíš?“ Jenže on to světlo k životu nepotřebuje. Má mluvící mobil, mluvící počítač a všechno v bytě má své pevné místo. "Světlo je pro vidící jistota. Pro nás je to jen položka na faktuře za elektřinu, kterou k orientaci nepotřebujeme."</p>
-<p> Čtení potmě v nemocnici Jednou jsem byl v nemocnici na pokoji s pánem, který byl úplně nevidomý. Byl večer, v pokoji absolutní tma. On si v klidu četl knihu v Braillově písmu (rukama pod dekou) a já poslouchal audioknihu. Najednou vrazila dovnitř sestřička a vyděsila se: „Hergot, vy tu máte tmu! Proč si nerozsvítíte?“ Odpověď byla jednoduchá: „Protože na to, co děláme, vidět nepotřebujeme.“ U zdravých lidí je zrak dominantní smysl, takže když zhasnete, mozek panikaří. My v té tmě žijeme pořád, pro nás se nic nemění.</p>
-<p> Noční putování po bytě Znáte ten pocit, když jdete v noci na záchod a v polospánku trefíte do koupelny i bez rozsvícení? To je přesně náš stav 24/7. My ten byt známe hmatem a sluchem tak důvěrně, že byste nám do cesty mohli postavit i klavír a my se mu vyhneme.</p>
-<p> Chcete zažít skutečný šok? Pokud chcete opravdu pochopit, o čem mluvím, mám pro vás jedno doporučení. Není to reklama, je to osobní tip pro každého, kdo chce na chvíli „přepnout“ mozek. Navštivte Neviditelnou výstavu (https://neviditelna.cz/).</p>
+<p> Prosím tě, rozsviť si! (Nebo radši ne?) 👀 Přijdete na návštěvu k nevidomému a v celém bytě je černočerná tma. Vaše první reakce? Šok a hledání vypínače. Proč si nevidomí doma nesvítí a proč je pro nás tma vlastně docela úsporný kámoš? Představte si tu situaci: Večer zazvoníte u nevidomého kamaráda, on vám otevře, pozve vás dál, ale uvnitř je tma jako v pytli. Automaticky vyhrknete: „Ty bláho, ty tu máš ale tmu! Proč si nerozsvítíš?“ Jenže on to světlo k životu nepotřebuje. Má mluvící mobil, mluvící počítač a všechno v bytě má své pevné místo. "Světlo je pro vidící jistota. Pro nás je to jen položka na faktuře za elektřinu, kterou k orientaci nepotřebujeme." Čtení potmě v nemocnici Jednou jsem byl v nemocnici na pokoji s pánem, který byl úplně nevidomý. Byl večer, v pokoji absolutní tma. On si v klidu četl knihu v Braillově písmu (rukama pod dekou) a já poslouchal audioknihu. Najednou vrazila dovnitř sestřička a vyděsila se: „Hergot, vy tu máte tmu! Proč si nerozsvítíte?“ Odpověď byla jednoduchá: „Protože na to, co děláme, vidět nepotřebujeme.“ U zdravých lidí je zrak dominantní smysl, takže když zhasnete, mozek panikaří. My v té tmě žijeme pořád, pro nás se nic nemění. Noční putování po bytě Znáte ten pocit, když jdete v noci na záchod a v polospánku trefíte do koupelny i bez rozsvícení? To je přesně náš stav 24/7. My ten byt známe hmatem a sluchem tak důvěrně, že byste nám do cesty mohli postavit i klavír a my se mu vyhneme. Chcete zažít skutečný šok? Pokud chcete opravdu pochopit, o čem mluvím, mám pro vás jedno doporučení. Není to reklama, je to osobní tip pro každého, kdo chce na chvíli „přepnout“ mozek. Navštivte Neviditelnou výstavu (https://neviditelna.cz/).</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>Co vás tam čeká?</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Totální tma, kde váš zrak najednou znamená nulu.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Vyškolení nevidomí průvodci, kteří jsou v té tmě vašimi bohy.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Zjistíte, jaké to je dělat běžné věci (jako zaplatit kávu) jen podle hmatu a sluchu.</span></div>
-<p> "Po hodině v úplné tmě vyjdete ven a svět už pro vás nikdy nebude vypadat stejně jako dřív."</p>
-<p> Závěr Příště, až přijdete k nevidomému a bude tam tma, tak nepanikařte.</p>
+<p> "Po hodině v úplné tmě vyjdete ven a svět už pro vás nikdy nebude vypadat stejně jako dřív." Závěr Příště, až přijdete k nevidomému a bude tam tma, tak nepanikařte.</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>Zeptejte se, jestli si můžete rozsvítit vy, aby se vám lépe sedělo.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>Uvědomte si, že on v té tmě není ztracený.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>A hlavně – nechte si tu historku o šetření za elektriku projít hlavou. 😄</span></div>
@@ -166,18 +124,40 @@
 
     <footer class="mt-16 pt-8 border-t border-slate-800">
       <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-6 text-center">
-        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">TAK CO? ZKUSÍTE TU NEVIDITELNOU VÝSTAVU?</p>
-        <p class="text-slate-400 text-sm mb-4 italic">Pokud se vám článek líbil, tak ho prosím sdílejte.</p>
+        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za pozornost.</p>
+        <p class="text-slate-400 text-sm mb-4 italic">Svět nevidomých není černobílý. Pokud vám článek přišel fajn, sdílejte ho – pomůžete mi šířit osvětu, která nebolí.</p>
         <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
           Zpět na hlavní stránku
         </a>
       </div>
     </footer>
-
   </main>
 
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-sm bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl z-[100] hidden">
+    <div class="flex items-start gap-4">
+      <div class="text-2xl">🍪</div>
+      <div>
+        <h4 class="text-white font-bold mb-1 text-sm uppercase tracking-wider">Bereme si sušenky</h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Používáme jen základní cookies, abychom věděli, že sem vůbec někdo chodí. Žádný šmírování.
+        </p>
+        <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest py-2 px-4 rounded-full transition-all">
+          V pořádku
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Skript pro progress bar
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
     window.onscroll = function() {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -185,6 +165,5 @@
       document.getElementById("progress-bar").style.width = scrolled + "%";
     };
   </script>
-
 </body>
 </html>

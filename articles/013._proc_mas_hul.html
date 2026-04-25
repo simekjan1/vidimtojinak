@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proč máš hůl, když ještě něco vidíš? | Vidím to jinak</title>
+  <title>Proc mas hul | Vidím to jinak</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="Vidíte člověka s bílou holí, který si v tramvaji čte noviny nebo kouká do mobilu? Než ho začnete obviňovat z podvodu století, pojďme si vysvětlit, že slepota není jen černá tma.">
+  <meta name="keywords" content="edukace, nevidomí, handicap, realita bez filtru, Jan Šimek, osvěta">
+  <meta name="author" content="Jan Šimek">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vidimtojinak.cz/articles/013._proc_mas_hul.html">
 
-  gtag('config', 'G-FTQEHCE1DR');
-</script>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Proc mas hul | Vidím to jinak">
+  <meta property="og:description" content="Vidíte člověka s bílou holí, který si v tramvaji čte noviny nebo kouká do mobilu? Než ho začnete obviňovat z podvodu století, pojďme si vysvětlit, že slepota není jen černá tma.">
+  <meta property="og:url" content="https://vidimtojinak.cz/articles/013._proc_mas_hul.html">
+  <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTQEHCE1DR');
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -22,14 +33,11 @@
       --bg-dark: #020617;
       --accent-blue: #3b82f6;
     }
-
     body {
       background-color: var(--bg-dark);
       background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.2) 0px, transparent 50%);
       min-height: 100vh;
     }
-
-    /* Progress bar nahoře */
     #progress-bar {
       position: fixed;
       top: 0;
@@ -40,74 +48,29 @@
       z-index: 100;
       transition: width 0.1s;
     }
-
-    /* Typografie a odstavce */
-    .prose-custom p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      color: #cbd5e1; /* slate-300 */
-    }
-
-    /* První odstavec - "perex" */
+    .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; color: #cbd5e1; }
     .prose-custom p:first-of-type {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #f1f5f9; /* slate-100 */
-      line-height: 1.6;
-      border-left: 4px solid var(--accent-blue);
-      padding-left: 1.5rem;
-      margin-bottom: 2.5rem;
+      font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.6; border-left: 4px solid var(--accent-blue);
+      padding-left: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Nadpisy v článku */
     .prose-custom h2, .prose-custom h3 {
-      color: #f1f5f9;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+      margin-top: 3rem; margin-bottom: 1rem;
     }
-
     .prose-custom h2 { font-size: 1.875rem; }
     .prose-custom h3 { font-size: 1.5rem; }
-
-    /* Zvýraznění (tučný text) */
-    .prose-custom strong {
-      color: #f8fafc;
-      font-weight: 700;
-    }
-
-    /* TL;DR Box (Shrnutí) */
+    .prose-custom strong { color: #f8fafc; font-weight: 700; }
     .tldr-box {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
+      background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 1rem; padding: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Citace (ty nekorektní hlášky) */
     blockquote {
-      font-style: italic;
-      font-size: 1.2rem;
-      border-left: 4px solid #ef4444; /* Červená pro důraz */
-      background: rgba(239, 68, 68, 0.05);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      color: #fca5a5;
+      font-style: italic; font-size: 1.2rem; border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05); padding: 1.5rem; margin: 2rem 0; color: #fca5a5;
     }
-
-    /* Odrážky */
-    .prose-custom ul {
-      margin-bottom: 1.5rem;
-      list-style-type: none;
-    }
-
-    .prose-custom li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
+    .prose-custom ul { margin-bottom: 1.5rem; list-style-type: none; }
+    .prose-custom li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
   </style>
 </head>
 
@@ -126,13 +89,12 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-4 pb-20 pt-12">
-
     <header class="mb-12">
       <h1 class="text-4xl sm:text-5xl font-black mb-4 leading-tight tracking-tighter">
-        Proč máš hůl, když ještě něco vidíš?
+        Proc mas hul
       </h1>
       <div class="flex items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-        <span>Publikováno: <time>24. 04. 2026</time></span>
+        <span>Publikováno: <time>25. 04. 2026</time></span>
         <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
         <span>Čtení na 5 minut</span>
       </div>
@@ -146,7 +108,9 @@
     </div>
 
     <article id="article-content" class="prose-custom max-w-none">
-      <p> Bílá hůl vs. mobil v ruce: Proč nejsem simulant? 👀 Vidíte člověka s bílou holí, který si v tramvaji čte noviny nebo kouká do mobilu? Než ho začnete obviňovat z podvodu století, pojďme si vysvětlit, že slepota není jen černá tma. Představte si situaci: Nastoupím do metra, orientuji se pomocí bílé hole, sednu si, vyndám mobil a dám si ho k očím, abych odepsal na zprávu. Najednou cítím ten pohrdavý pohled a slyším: „Prosím tě, proč máš hůl, když na ten mobil vidíš?“ "Většina lidí si myslí, že slepota je binární: buď vidíš barvy, nebo máš vypnutý monitor. Realita je ale mnohem barevnější – a občas i dost paradoxní." Tunel, mlha a rozbité pixely To, že mám mobil u očí, neznamená, že na něj vidím jako vy. Často používám čtečku obrazovky – aplikaci, která mi říká, co se na displeji děje. A co ta bílá hůl? Ta je pro mě životně důležitá i ve chvíli, kdy dokážu přečíst titulek v novinách. Příběh o „zradě“ v tramvaji Představte si pána, který bílou holí pracně najde volné místo v tramvaji, sedne si a pak vytáhne noviny a normálně čte. Podvodník? Ne. Člověk s vadou jménem Retinitis pigmentosa.</p>
+      <p> Proč máš hůl, když ještě něco vidíš?</p>
+<p> 👀 Vidíte člověka s bílou holí, který si v tramvaji čte noviny nebo kouká do mobilu? Než ho začnete obviňovat z podvodu století, pojďme si vysvětlit, že slepota není jen černá tma.</p>
+<p> Bílá hůl vs. mobil v ruce: Proč nejsem simulant? 👀 Vidíte člověka s bílou holí, který si v tramvaji čte noviny nebo kouká do mobilu? Než ho začnete obviňovat z podvodu století, pojďme si vysvětlit, že slepota není jen černá tma. Představte si situaci: Nastoupím do metra, orientuji se pomocí bílé hole, sednu si, vyndám mobil a dám si ho k očím, abych odepsal na zprávu. Najednou cítím ten pohrdavý pohled a slyším: „Prosím tě, proč máš hůl, když na ten mobil vidíš?“ "Většina lidí si myslí, že slepota je binární: buď vidíš barvy, nebo máš vypnutý monitor. Realita je ale mnohem barevnější – a občas i dost paradoxní." Tunel, mlha a rozbité pixely To, že mám mobil u očí, neznamená, že na něj vidím jako vy. Často používám čtečku obrazovky – aplikaci, která mi říká, co se na displeji děje. A co ta bílá hůl? Ta je pro mě životně důležitá i ve chvíli, kdy dokážu přečíst titulek v novinách. Příběh o „zradě“ v tramvaji Představte si pána, který bílou holí pracně najde volné místo v tramvaji, sedne si a pak vytáhne noviny a normálně čte. Podvodník? Ne. Člověk s vadou jménem Retinitis pigmentosa.</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>Jak to funguje: Má takzvané tunelové vidění. Je to jako byste se na svět dívali skrz úzkou trubičku. Na čtení textu mu to stačí, ale v prostoru je bez hole úplně ztracený, protože nevidí nic kolem sebe – ani schody, ani lidi, ani blížící se auto.</span></div>
 <p> Slepota má tisíc tváří Někdo vidí jen skvrny, někdo má před očima permanentní mlhu a někdo má výpadky v zorném poli. Bílá hůl není symbol absolutní tmy, je to bezpečnostní nástroj pro každého, komu oči nedovolují trefit bezpečně domů. Rychlý průvodce zrakovými vadami</p>
 <h2>Abyste příště věděli, s čím vším se my „ti s holí“ pereme:</h2>
@@ -171,18 +135,40 @@
 
     <footer class="mt-16 pt-8 border-t border-slate-800">
       <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-6 text-center">
-        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">I lidi se zbytky zraku musí používat bílou hůl.</p>
-        <p class="text-slate-400 text-sm mb-4 italic">Bílá hůl není módní doplněk, ale pomůcka pro život.</p>
+        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za pozornost.</p>
+        <p class="text-slate-400 text-sm mb-4 italic">Svět nevidomých není černobílý. Pokud vám článek přišel fajn, sdílejte ho – pomůžete mi šířit osvětu, která nebolí.</p>
         <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
           Zpět na hlavní stránku
         </a>
       </div>
     </footer>
-
   </main>
 
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-sm bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl z-[100] hidden">
+    <div class="flex items-start gap-4">
+      <div class="text-2xl">🍪</div>
+      <div>
+        <h4 class="text-white font-bold mb-1 text-sm uppercase tracking-wider">Bereme si sušenky</h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Používáme jen základní cookies, abychom věděli, že sem vůbec někdo chodí. Žádný šmírování.
+        </p>
+        <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest py-2 px-4 rounded-full transition-all">
+          V pořádku
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Skript pro progress bar
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
     window.onscroll = function() {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -190,6 +176,5 @@
       document.getElementById("progress-bar").style.width = scrolled + "%";
     };
   </script>
-
 </body>
 </html>

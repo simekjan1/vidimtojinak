@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Handicap není diagnóza | Vidím to jinak</title>
+  <title>Nejsem mental | Vidím to jinak</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="Když vám nefungují oči nebo nohy, neznamená to, že vám nefunguje mozek. Proč mají lidé tendenci nás automaticky pokládat za zaostalé a kde končí hranice mezi postižením a charakterem?">
+  <meta name="keywords" content="edukace, nevidomí, handicap, realita bez filtru, Jan Šimek, osvěta">
+  <meta name="author" content="Jan Šimek">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vidimtojinak.cz/articles/014._nejsem_mental.html">
 
-  gtag('config', 'G-FTQEHCE1DR');
-</script>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nejsem mental | Vidím to jinak">
+  <meta property="og:description" content="Když vám nefungují oči nebo nohy, neznamená to, že vám nefunguje mozek. Proč mají lidé tendenci nás automaticky pokládat za zaostalé a kde končí hranice mezi postižením a charakterem?">
+  <meta property="og:url" content="https://vidimtojinak.cz/articles/014._nejsem_mental.html">
+  <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTQEHCE1DR');
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -22,14 +33,11 @@
       --bg-dark: #020617;
       --accent-blue: #3b82f6;
     }
-
     body {
       background-color: var(--bg-dark);
       background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.2) 0px, transparent 50%);
       min-height: 100vh;
     }
-
-    /* Progress bar nahoře */
     #progress-bar {
       position: fixed;
       top: 0;
@@ -40,74 +48,29 @@
       z-index: 100;
       transition: width 0.1s;
     }
-
-    /* Typografie a odstavce */
-    .prose-custom p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      color: #cbd5e1; /* slate-300 */
-    }
-
-    /* První odstavec - "perex" */
+    .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; color: #cbd5e1; }
     .prose-custom p:first-of-type {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #f1f5f9; /* slate-100 */
-      line-height: 1.6;
-      border-left: 4px solid var(--accent-blue);
-      padding-left: 1.5rem;
-      margin-bottom: 2.5rem;
+      font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.6; border-left: 4px solid var(--accent-blue);
+      padding-left: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Nadpisy v článku */
     .prose-custom h2, .prose-custom h3 {
-      color: #f1f5f9;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+      margin-top: 3rem; margin-bottom: 1rem;
     }
-
     .prose-custom h2 { font-size: 1.875rem; }
     .prose-custom h3 { font-size: 1.5rem; }
-
-    /* Zvýraznění (tučný text) */
-    .prose-custom strong {
-      color: #f8fafc;
-      font-weight: 700;
-    }
-
-    /* TL;DR Box (Shrnutí) */
+    .prose-custom strong { color: #f8fafc; font-weight: 700; }
     .tldr-box {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
+      background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 1rem; padding: 1.5rem; margin-bottom: 2.5rem;
     }
-
-    /* Citace (ty nekorektní hlášky) */
     blockquote {
-      font-style: italic;
-      font-size: 1.2rem;
-      border-left: 4px solid #ef4444; /* Červená pro důraz */
-      background: rgba(239, 68, 68, 0.05);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      color: #fca5a5;
+      font-style: italic; font-size: 1.2rem; border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05); padding: 1.5rem; margin: 2rem 0; color: #fca5a5;
     }
-
-    /* Odrážky */
-    .prose-custom ul {
-      margin-bottom: 1.5rem;
-      list-style-type: none;
-    }
-
-    .prose-custom li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
+    .prose-custom ul { margin-bottom: 1.5rem; list-style-type: none; }
+    .prose-custom li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
   </style>
 </head>
 
@@ -126,13 +89,12 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-4 pb-20 pt-12">
-
     <header class="mb-12">
       <h1 class="text-4xl sm:text-5xl font-black mb-4 leading-tight tracking-tighter">
-        Handicap není diagnóza
+        Nejsem mental
       </h1>
       <div class="flex items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-        <span>Publikováno: <time>24. 04. 2026</time></span>
+        <span>Publikováno: <time>25. 04. 2026</time></span>
         <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
         <span>Čtení na 5 minut</span>
       </div>
@@ -146,20 +108,15 @@
     </div>
 
     <article id="article-content" class="prose-custom max-w-none">
-      <h2>Handicap není diagnóza IQ:</h2>
+      <p> Handicap není diagnóza</p>
 <p> 👀 Když vám nefungují oči nebo nohy, neznamená to, že vám nefunguje mozek. Proč mají lidé tendenci nás automaticky pokládat za zaostalé a kde končí hranice mezi postižením a charakterem?</p>
-<p> Dost často se setkávám s tímto předsudkem: Když někdo nevidí nebo špatně chodí, musí být zákonitě mentálně postižený. Tohle je věc, která mě dokáže rozpálit do ruda. Zažil jsem desítky situací, kdy se ke mně lidé chovali jako k malému dítěti nebo k někomu, kdo si neumí napočítat do pěti. "Postižení není omluva pro hloupost, ale zdraví není automaticky zárukou inteligence."</p>
-<p> Žargon z internátu</p>
-<p> Na střední jsem bydlel na pokoji se dvěma kluky, kteří mentální postižení měli. Zatímco ostatní si z nich dělali srandu, já jsem v nich našel parťáky. Vybudovali jsme si vlastní žargon, chodili spolu na pivo a smáli se úplně stejným věcem jako ostatní. Jednou se mě jedna spolužačka zeptala: „Proč se s nimi vůbec bavíš? Vždyť jsou to mentálové.“ Moje odpověď byla krátká: „Ty jsi zdravá, já nevidím a oni jsou postižení jinak. To se se mnou taky přestaneš bavit, protože mi nefungují oči?“</p>
-<p> Elitářství zdravých „přežívačů“</p>
-<p> Teď budu trochu na hraně: Potkal jsem spoustu zdravých lidí, kteří jen přežívají, na všechno nadávají, ničím do společnosti nepřispívají a vlastně nic pořádně neumí. A pak jsem potkal handicapované, kteří i se svými omezeními žijí naplno, mají spoustu zájmů a makají na sobě.</p>
+<h2>Handicap není diagnóza IQ:</h2>
+<p> 👀 Když vám nefungují oči nebo nohy, neznamená to, že vám nefunguje mozek. Proč mají lidé tendenci nás automaticky pokládat za zaostalé a kde končí hranice mezi postižením a charakterem? Dost často se setkávám s tímto předsudkem: Když někdo nevidí nebo špatně chodí, musí být zákonitě mentálně postižený. Tohle je věc, která mě dokáže rozpálit do ruda. Zažil jsem desítky situací, kdy se ke mně lidé chovali jako k malému dítěti nebo k někomu, kdo si neumí napočítat do pěti. "Postižení není omluva pro hloupost, ale zdraví není automaticky zárukou inteligence." Žargon z internátu Na střední jsem bydlel na pokoji se dvěma kluky, kteří mentální postižení měli. Zatímco ostatní si z nich dělali srandu, já jsem v nich našel parťáky. Vybudovali jsme si vlastní žargon, chodili spolu na pivo a smáli se úplně stejným věcem jako ostatní. Jednou se mě jedna spolužačka zeptala: „Proč se s nimi vůbec bavíš? Vždyť jsou to mentálové.“ Moje odpověď byla krátká: „Ty jsi zdravá, já nevidím a oni jsou postižení jinak. To se se mnou taky přestaneš bavit, protože mi nefungují oči?“ Elitářství zdravých „přežívačů“ Teď budu trochu na hraně: Potkal jsem spoustu zdravých lidí, kteří jen přežívají, na všechno nadávají, ničím do společnosti nepřispívají a vlastně nic pořádně neumí. A pak jsem potkal handicapované, kteří i se svými omezeními žijí naplno, mají spoustu zájmů a makají na sobě.</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>V čem je ten rozdíl? V tom, že ten první má v pořádku tělo, ale rezignoval na život? A ten druhý má tělo „rozbité“, ale hlavu má v pořádku víc než kdokoli jiný?</span></div>
-<p> Virtuóz, co si sám nenakoupí</p>
-<p> Znal jsem kluka, kterého by společnost odepsala jako „mentála jak poleno“. Sám si nenakoupí, neuvaří, nevyřídí si nic na úřadě. Ale dejte mu do ruky harmoniku. V ten moment se změní ve virtuóza, který vám svým hraním vezme dech.</p>
+<p> Virtuóz, co si sám nenakoupí Znal jsem kluka, kterého by společnost odepsala jako „mentála jak poleno“. Sám si nenakoupí, neuvaří, nevyřídí si nic na úřadě. Ale dejte mu do ruky harmoniku. V ten moment se změní ve virtuóza, který vám svým hraním vezme dech.</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>❌</span><span>Chyba: Posuzovat člověka podle toho, co nezvládne.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>Správně: Vidět to, v čem vyniká, i když zbytek světa vidí jen diagnózu.</span></div>
-<p> Závěr</p>
-<p> "Názor, který vybočuje z řady, není příznakem zaostalosti, ale důkazem vlastní osobnosti." Příště, až potkáte někoho, kdo se vyjadřuje jinak nebo se pohybuje jinak než vy:</p>
+<p> Závěr "Názor, který vybočuje z řady, není příznakem zaostalosti, ale důkazem vlastní osobnosti." Příště, až potkáte někoho, kdo se vyjadřuje jinak nebo se pohybuje jinak než vy:</p>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Neházejte ho hned do škatulky „mentál“.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Uvědomte si, že má jinou výchovu, jiný osud, ale stejnou lidskou hodnotu.</span></div>
 <div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>🔹</span><span>Nechte ho normálně žít, místo abyste ho soudili za to, že není „tabulkový“.</span></div>
@@ -168,18 +125,40 @@
 
     <footer class="mt-16 pt-8 border-t border-slate-800">
       <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-6 text-center">
-        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za přečtení. </p>
-        <p class="text-slate-400 text-sm mb-4 italic">Tohle je důležité téma, o kterém je třeba mluvit. </p>
+        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za pozornost.</p>
+        <p class="text-slate-400 text-sm mb-4 italic">Svět nevidomých není černobílý. Pokud vám článek přišel fajn, sdílejte ho – pomůžete mi šířit osvětu, která nebolí.</p>
         <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
           Zpět na hlavní stránku
         </a>
       </div>
     </footer>
-
   </main>
 
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-sm bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl z-[100] hidden">
+    <div class="flex items-start gap-4">
+      <div class="text-2xl">🍪</div>
+      <div>
+        <h4 class="text-white font-bold mb-1 text-sm uppercase tracking-wider">Bereme si sušenky</h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Používáme jen základní cookies, abychom věděli, že sem vůbec někdo chodí. Žádný šmírování.
+        </p>
+        <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest py-2 px-4 rounded-full transition-all">
+          V pořádku
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Skript pro progress bar
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
     window.onscroll = function() {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -187,6 +166,5 @@
       document.getElementById("progress-bar").style.width = scrolled + "%";
     };
   </script>
-
 </body>
 </html>
