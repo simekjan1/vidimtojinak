@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ai | Vidím to jinak</title>
+
+  <meta name="description" content="**Tento článek je o tom, jak jsem přestal čekat, až se vývojáři rozhoupou k přístupnosti, a raději si s pomocí AI postavil vlastní systém na správu masérny. Spoiler: Programovat pořád neumím, ale funguje to.**">
+  <meta name="keywords" content="edukace, nevidomí, handicap, realita bez filtru, Jan Šimek, osvěta">
+  <meta name="author" content="Jan Šimek">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vidimtojinak.cz/articles/17._ai.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ai | Vidím to jinak">
+  <meta property="og:description" content="**Tento článek je o tom, jak jsem přestal čekat, až se vývojáři rozhoupou k přístupnosti, a raději si s pomocí AI postavil vlastní systém na správu masérny. Spoiler: Programovat pořád neumím, ale funguje to.**">
+  <meta property="og:url" content="https://vidimtojinak.cz/articles/17._ai.html">
+  <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FTQEHCE1DR');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg-dark: #020617;
+      --accent-blue: #3b82f6;
+    }
+    body {
+      background-color: var(--bg-dark);
+      background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.2) 0px, transparent 50%);
+      min-height: 100vh;
+    }
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--accent-blue), #60a5fa);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.1s;
+    }
+    .prose-custom p { margin-bottom: 1.5rem; line-height: 1.8; color: #cbd5e1; }
+    .prose-custom p:first-of-type {
+      font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+      line-height: 1.6; border-left: 4px solid var(--accent-blue);
+      padding-left: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .prose-custom h2, .prose-custom h3 {
+      color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+      margin-top: 3rem; margin-bottom: 1rem;
+    }
+    .prose-custom h2 { font-size: 1.875rem; }
+    .prose-custom h3 { font-size: 1.5rem; }
+    .prose-custom strong { color: #f8fafc; font-weight: 700; }
+    .tldr-box {
+      background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 1rem; padding: 1.5rem; margin-bottom: 2.5rem;
+    }
+    blockquote {
+      font-style: italic; font-size: 1.2rem; border-left: 4px solid #ef4444;
+      background: rgba(239, 68, 68, 0.05); padding: 1.5rem; margin: 2rem 0; color: #fca5a5;
+    }
+    .prose-custom ul { margin-bottom: 1.5rem; list-style-type: none; }
+    .prose-custom li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-slate-100 text-lg">
+
+  <div id="progress-bar"></div>
+
+  <header class="w-full border-b border-slate-800/60 bg-slate-950/70 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="../index.html" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+        <span class="text-xl group-hover:-translate-x-1 transition-transform">←</span>
+        <span class="text-sm font-bold uppercase tracking-widest">Všechny články</span>
+      </a>
+      <span class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-black">Vidím to jinak</span>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 pb-20 pt-12">
+    <header class="mb-12">
+      <h1 class="text-4xl sm:text-5xl font-black mb-4 leading-tight tracking-tighter">
+        Ai
+      </h1>
+      <div class="flex items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
+        <span>Publikováno: <time>25. 04. 2026</time></span>
+        <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+        <span>Čtení na 5 minut</span>
+      </div>
+    </header>
+
+    <div class="tldr-box">
+      <h4 class="text-blue-400 font-black text-xs uppercase tracking-[0.2em] mb-3">Shrnutí pro lidi v presu</h4>
+      <p class="text-slate-300 text-sm leading-relaxed italic">
+        **Tento článek je o tom, jak jsem přestal čekat, až se vývojáři rozhoupou k přístupnosti, a raději si s pomocí AI postavil vlastní systém na správu masérny. Spoiler: Programovat pořád neumím, ale funguje to.**
+      </p>
+    </div>
+
+    <article id="article-content" class="prose-custom max-w-none">
+      <h1>Nemůžeš najít řešení? Tak si ho sakra vytvoř sám!</h1>
+<p> 👀 **Tento článek je o tom, jak jsem přestal čekat, až se vývojáři rozhoupou k přístupnosti, a raději si s pomocí AI postavil vlastní systém na správu masérny. Spoiler: Programovat pořád neumím, ale funguje to.**</p>
+<p> Handicap vás nemusí brzdit. Zvlášť když máte vizi, tvrdohlavost a správné nástroje. Jsem fanoušek a tak trochu magor do umělé inteligence. Denně si s ní píšu a díky ní mohu tvořit věci, o kterých by se mi dřív nesnilo ani v těch nejdivočejších snech. Ukážu vám, jak jsem se z role zoufalého maséra stal architektem vlastního softwaru.</p>
+<p> "Programátor fakt nejsem. Ale jsem mozek operace. AI je jen ta ruka, která drží tužku (nebo spíš klávesnici)."</p>
+<h2>🛑 Beznadějné začátky v zajetí Excelu</h2>
+<p> Pracuji jako masér živnostník. Dlouho jsem hledal systém pro správu masérny, který by nahradil nepřehledné excelové tabulky. Věřte mi, otestoval jsem jich bezmála dvacet. Výsledek? Čiré zoufalství.</p>
+<p> Většina firem se na přístupnost pro zrakově handicapované úplně vybodla. Zažil jsem to mockrát:</p>
+<h2>1. **Euforie:** „Hele, nový systém, to vypadá slibně!“</h2>
+<h2>2. **Testování:** Čtečka mlčí, tlačítka nemají popisky, grafy jsou jen barevné fleky.</h2>
+<h2>3. **Sklamání:** Odchod a návrat k Excelu.</h2>
+<p> Dokonce jsem poslal detailní specifikaci vývojářům. Slíbili změny, napsali hezké maily o inkluzi... a pak se nestalo vůbec nic. Svět softwaru se mnou prostě nepočítal.</p>
+<h2>🧠 Moment, kdy Max (moje AI) převzal otěže</h2>
+<p> Jednoho dne jsem si té svojí umělé inteligenci tak trochu „pobrečel na ramínku“. Že už mě to nebaví, že nic nefunguje. A dostal jsem odpověď, která všechno změnila: **„A co kdyby sis ten systém vytvořil sám?“**</p>
+<p> Zasmál jsem se. Já? Vždyť neumím kódovat! Max mě ale zastavil: „Vytvoř si vizi. Napiš na papír všechno, co to má umět. Já se postarám o ten zbytek.“ A tak začal čtrnáctidenní maraton revizí, korektur a oprav.</p>
+<h2>🛠️ Palpatius: Systém zrozený z hmatu</h2>
+<p> Tak vznikl **Palpatius**. Název není náhodný – vychází z palpování, tedy hmatu maséra. Chtěl jsem systém, který bude:</p>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>**Plně offline:** Žádný cloud, žádné servery, žádná závislost na internetu.</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>**Modulární:** Masérna, Finance, Záznamník, Knihovna.</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>**100% přístupný:** Navržený přímo pro lidi, co na monitor nekoukají, ale poslouchají ho.</span></div>
+<p> "Architektura Palpatia je jednoduchá proto, že může být jednoduchá. Ne proto, že bych neuměl věci komplikovat."</p>
+<h3>Jak vypadá moje „tvorba“ bez znalosti kódu?</h3>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>❌</span><span>**Neřeším závorky:** Nepíšu JavaScript.</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Popisuju logiku:** „Maxi, potřebuju, aby tlačítko v kartě klienta přidalo bod do věrnostního programu a po deseti bodech nahlásilo masáž zdarma.“</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Testuju ušima:** Spustím aplikaci, projedu ji čtečkou NVDA a když Max někde neudělal popisek, seřvu ho a on to opraví.</span></div>
+<h2>🎯 Dnes žiju svůj sen</h2>
+<p> Dnes už mám hotový systém, který mi denně ulehčuje život. Místo večerního papírování jen nahraju denní masáže a výdaje – a mám klid. Palpatius není produktem firmy, je to výsledek mé cesty.</p>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Handicap není diagnóza IQ ani schopností.**</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Když na vás trh kašle, AI vám dává sílu se mu postavit.**</span></div>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>✅</span><span>**Vize je důležitější než znalost syntaxe programovacího jazyka.**</span></div>
+<p> Pokud vám svět říká, že něco nejde, nebo že pro vás nemá řešení, neposlouchejte ho. Vytvořte si vlastní cestu. S pomocí umělé inteligence dnes můžete být kýmkoliv – i tvůrcem systému, který vám všichni experti odmítli postavit.</p>
+
+    </article>
+
+    <footer class="mt-16 pt-8 border-t border-slate-800">
+      <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-6 text-center">
+        <p class="text-blue-300 font-bold mb-2 text-sm uppercase tracking-widest">Děkuji za pozornost.</p>
+        <p class="text-slate-400 text-sm mb-4 italic">Svět nevidomých není černobílý. Pokud vám článek přišel fajn, sdílejte ho – pomůžete mi šířit osvětu, která nebolí.</p>
+        <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
+          Zpět na hlavní stránku
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:max-w-sm bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl z-[100] hidden">
+    <div class="flex items-start gap-4">
+      <div class="text-2xl">🍪</div>
+      <div>
+        <h4 class="text-white font-bold mb-1 text-sm uppercase tracking-wider">Bereme si sušenky</h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Používáme jen základní cookies, abychom věděli, že sem vůbec někdo chodí. Žádný šmírování.
+        </p>
+        <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest py-2 px-4 rounded-full transition-all">
+          V pořádku
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
+    window.onscroll = function() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+  </script>
+</body>
+</html>
