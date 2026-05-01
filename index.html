@@ -300,22 +300,24 @@
       </p>
     </footer>
 
-<!-- Zvětšený TOPlist panel na pravé straně -->
-    <div class="fixed right-4 bottom-24 z-[60] flex flex-col items-center gap-2 bg-slate-900/80 p-3 rounded-xl border border-slate-700 backdrop-blur-sm shadow-2xl transition-all hover:scale-110">
-      <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Návštěvnost</p>
-      
-      <a href="https://www.toplist.cz" id="toplistcz1841732" title="TOPlist" class="block scale-150 origin-right py-4">
-        <noscript>
-          <img src="https://toplist.cz/count.asp?id=1841732&logo=mc&njs=1" border="0" alt="TOPlist" width="88" height="120"/>
-        </noscript>
-        <script language="JavaScript">
-          (function(d,e,s) {
-            d.getElementById('toplistcz1841732').innerHTML='<img src="https://toplist.cz/count.asp?id=1841732&logo=mc&http='+
-            e(d.referrer)+'&t='+e(d.title)+'&l='+e(d.URL)+'&wi='+e(s.width)+'&he='+e(s.height)+'&cd='+
-            e(s.colorDepth)+'" width="88" height="120" border="0" alt="TOPlist" />';
-          }(document,encodeURIComponent,window.screen))
-        </script>
-      </a>
+<!-- Zvětšený TOPlist panel - pevně na konci stránky -->
+    <div class="flex justify-center md:justify-end md:pr-12 py-10 bg-slate-950 border-t border-slate-900">
+      <div class="flex flex-col items-center gap-3 bg-slate-900/50 p-6 rounded-3xl border border-slate-800 shadow-xl transition-all hover:border-blue-500/50">
+        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em]">Statistiky webu</p>
+        
+        <a href="https://www.toplist.cz" id="toplistcz1841732" title="TOPlist" class="block scale-150 py-6">
+          <noscript>
+            <img src="https://toplist.cz/count.asp?id=1841732&logo=mc&njs=1" border="0" alt="TOPlist" width="88" height="120"/>
+          </noscript>
+          <script language="JavaScript">
+            (function(d,e,s) {
+              d.getElementById('toplistcz1841732').innerHTML='<img src="https://toplist.cz/count.asp?id=1841732&logo=mc&http='+
+              e(d.referrer)+'&t='+e(d.title)+'&l='+e(d.URL)+'&wi='+e(s.width)+'&he='+e(s.height)+'&cd='+
+              e(s.colorDepth)+'" width="88" height="120" border="0" alt="TOPlist" />';
+            }(document,encodeURIComponent,window.screen))
+          </script>
+        </a>
+      </div>
     </div>
 
   </main>
