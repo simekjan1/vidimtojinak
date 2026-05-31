@@ -1,0 +1,113 @@
+:root {
+  --bg-dark: #020617;
+  --accent-blue: #3b82f6;
+}
+
+/* Pozadí s velmi decentním zářením z rohů */
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(29, 78, 216, 0.06) 0px, transparent 50%);
+  min-height: 100vh;
+}
+
+/* Horní linka indikující čtení */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #60a5fa, #2563eb);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s ease;
+}
+
+/* Jemný glow efekt pod hlavním nadpisem */
+.text-glow {
+  text-shadow: 0 0 40px rgba(59, 130, 246, 0.25);
+}
+
+/* Tlačítka z rychlé navigace v Hero */
+.quick-nav-card {
+  backdrop-filter: blur(8px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.quick-nav-card:hover {
+  transform: translateY(-2px);
+  background: rgba(30, 41, 59, 0.6);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Zjednodušené karty článků v řádkovém seznamu */
+.article-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.article-list-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateX(4px);
+}
+.article-list-item h4 {
+  color: #f1f5f9;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+.article-list-item:hover h4 {
+  color: #60a5fa;
+}
+.article-list-item p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Štítky témat na konci řádků */
+.article-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.5rem;
+  shrink-0: 1;
+}
+
+/* Odkazy v pravém panelu */
+.sidebar-link {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  padding: 0.25rem 0;
+  transition: all 0.2s;
+}
+.sidebar-link:hover {
+  color: #fff;
+  transform: translateX(2px);
+}
+.start-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.start-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(59,130,246,0.4);
+  transform: translateY(-3px);
+}

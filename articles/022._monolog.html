@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monolog | Vidím to jinak</title>
+
+    <meta name="description" content="Jak se naučit vycházet s monologisty, a nezbláznit se z toho.">
+    <meta name="keywords" content="nevidomí, osvěta, Jan Šimek, handicap, realita bez filtru, život ve tmě">
+    <meta name="author" content="Jan Šimek">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vidimtojinak.cz/articles/022._monolog.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Monolog | Vidím to jinak">
+    <meta property="og:description" content="Jak se naučit vycházet s monologisty, a nezbláznit se z toho.">
+    <meta property="og:url" content="https://vidimtojinak.cz/articles/022._monolog.html">
+    <meta property="og:image" content="https://vidimtojinak.cz/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monolog | Vidím to jinak">
+    <meta name="twitter:description" content="Jak se naučit vycházet s monologisty, a nezbláznit se z toho.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Monolog",
+      "description": "Jak se naučit vycházet s monologisty, a nezbláznit se z toho.",
+      "author": {
+        "@type": "Person",
+        "name": "Jan Šimek"
+      },
+      "datePublished": "31. 05. 2026",
+      "image": "https://vidimtojinak.cz/og-image.png"
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTQEHCE1DR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FTQEHCE1DR');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --accent-blue: #3b82f6;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(29, 78, 216, 0.08) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to right, #2563eb, #60a5fa, #2563eb);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease;
+        }
+
+        .prose-custom p { margin-bottom: 1.75rem; line-height: 1.8; color: #cbd5e1; }
+        
+        /* Perex (první odstavec článku) */
+        .prose-custom p:first-of-type {
+            font-size: 1.25rem; font-weight: 500; color: #f1f5f9;
+            line-height: 1.7; border-left: 4px solid var(--accent-blue);
+            padding-left: 1.5rem; margin-bottom: 2.5rem;
+        }
+
+        .prose-custom h2 {
+            color: #f1f5f9; font-weight: 800; letter-spacing: -0.02em;
+            margin-top: 4rem; margin-bottom: 1.5rem; font-size: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;
+        }
+
+        .prose-custom h3 {
+            color: #f1f5f9; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;
+        }
+
+        .prose-custom strong { color: #fff; font-weight: 700; }
+
+        /* TLDR Box - Klíčový pro tvůj Python skript */
+        .tldr-box {
+            background: rgba(30, 41, 59, 0.4); 
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 1.5rem; padding: 2rem; margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        blockquote {
+            font-style: italic; font-size: 1.25rem; border-left: 4px solid #3b82f6;
+            background: rgba(59, 130, 246, 0.05); padding: 2rem; margin: 2.5rem 0; 
+            color: #93c5fd; border-radius: 0 1rem 1rem 0;
+        }
+
+        /* Cílení na emoji odrážky generované skriptem (bez nutnosti měnit cms.py) */
+        .prose-custom .flex.gap-3.mb-4.items-start {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .prose-custom .flex.gap-3.mb-4.items-start:hover {
+            transform: translateX(4px);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .share-btn {
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .share-btn:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-slate-200 text-lg selection:bg-blue-500/30">
+
+    <div id="progress-bar"></div>
+
+    <header class="w-full border-b border-white/5 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="../index.html" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+                <span class="group-hover:-translate-x-1 transition-transform">←</span>
+                <span class="text-sm font-semibold tracking-wide">Zpět na články</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span class="text-[10px] text-slate-400 uppercase tracking-[0.3em] font-bold">Vidím to jinak</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pb-20 pt-12">
+        
+        <header class="mb-12">
+            <div class="inline-flex items-center gap-2 mb-6 rounded-full border border-blue-500/20 bg-blue-500/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                Realita bez filtru
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.1] tracking-tight text-white">
+                Monolog
+            </h1>
+
+            <div class="flex flex-wrap items-center gap-6 text-sm text-slate-400 border-y border-white/5 py-6">
+                <div class="flex items-center gap-2">
+                    <span class="opacity-50">Publikováno</span>
+                    <time class="text-slate-200 font-semibold">31. 05. 2026</time>
+                </div>
+                <div class="flex items-center gap-2 text-blue-400/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="font-bold">5 min čtení</span>
+                </div>
+                <div class="ml-auto flex gap-2">
+                    <span class="px-3 py-1 rounded-md bg-slate-800 text-[10px] font-bold uppercase tracking-widest text-slate-300">Osvěta</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="tldr-box">
+            <h2 class="text-blue-400 font-extrabold text-xs uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                <span>💡</span> Co si z toho odnést
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed italic">
+                Jak se naučit vycházet s monologisty, a nezbláznit se z toho.
+            </p>
+        </div>
+
+        <article id="article-content" class="prose-custom max-w-none shadow-sm">
+            <h1>PROVOZNÍ REŽIM PRO MONOLOGISTY</h1>
+<p> *(osobní pracovní manuál)*</p>
+<h2>PROČ TENHLE PAPÍR EXISTUJE</h2>
+<p> Tento dokument není o tom měnit lidi. Není o tom učit někoho slušnosti. Je o tom **chránit svůj vnitřní prostor**, energii a důstojnost v prostředí, kde dialog často nefunguje. Nejde o uzavření se lidem. Jde o **psychickou hygienu**.</p>
+<h2>ZÁKLADNÍ VÝCHODISKO</h2>
+<p> **Ne každý, kdo mluví, je připravený na dialog.**</p>
+<p> Pokud někdo: - nenechá domluvit - ignoruje odpovědi - mluví bez reakce na druhého</p>
+<div class='flex gap-3 mb-4 items-start'><span class='shrink-0'>👉</span><span>nejde o dialog, ale o monologický proud.</span></div>
+<p> V monologickém proudu **nemusím být účastník**.</p>
+<h2>VNITŘNÍ NASTAVENÍ (NEJDŮLEŽITĚJŠÍ)</h2>
+<p> > „Tihle lidé nejsou dialog. Jsou zvuková kulisa.“ Ne cynicky. Funkčně.</p>
+<p> Jakmile čekám dialog, vyčerpám se. Jakmile čekám hluk, zůstanu klidnější.</p>
+<h2>KOMUNIKAČNÍ MINIMUM (CMD)</h2>
+<p> S monologisty komunikuji **co nejméně, co nejjasněji**.</p>
+<h3>POVOLENO:</h3>
+<p> - jedna věta - ano / ne - fakt - ukončení</p>
+<h3>ZAKÁZÁNO:</h3>
+<p> - vysvětlování - obhajování - rozvíjení tématu - reagování na jejich asociace</p>
+<h3>FUNKČNÍ VĚTY:</h3>
+<p> - „Teď pracuji.“ - „Teď nemám kapacitu.“ - „Odpověď je ne.“ - „Tohle teď řešit nebudu.“ - „Musím jít.“</p>
+<p> Bez omluv. Bez vysvětlování. Bez dalšího prostoru.</p>
+<h2>NEVSTUPUJI DO PROUDU – UKONČUJI HO</h2>
+<p> Nečekám na pauzu. U monologistů **pauza nepřijde**.</p>
+<p> Používám oznamovací věty: - „Končím.“ - „Vrátím se k práci.“ - „Teď ne.“</p>
+<p> I uprostřed řeči.</p>
+<h2>MENTÁLNÍ ŠTÍT</h2>
+<p> Když někdo mluví bez respektu: - neposlouchám obsah - nevysvětluji - neopravuji</p>
+<p> Vnitřní věta: > „Tohle není dialog. Nemusím se účastnit.“ Tohle není nezdvořilost. To je sebeochrana.</p>
+<h2>HUMOR JAKO VENTIL – NE JAKO NÁHRADA HRANIC</h2>
+<p> Humor: - ano, pro mě - ano, s bezpečnými lidmi</p>
+<p> Ale: - ne místo hranic - ne jako obrana v přímém kontaktu</p>
+<p> Neutralita je silnější než ironie.</p>
+<h2>ROZDÍL, NA KTERÝ NEZAPOMÍNAT</h2>
+<p> **Občasné skočení do řeči**: - naléhavost - situace - výjimka ➡ chápu</p>
+<p> **Trvalé skákání do řeči**: - ignorování - dominance - absence prostoru ➡ neberu osobně, ale **neúčastním se**</p>
+<h2>OTEVŘENOST K LIDEM (ABYCH SE NEUZAVŘEL)</h2>
+<p> Neříkám si: > „Lidi mě vyčerpávají.“</p>
+<p> Říkám si: > „Vyčerpává mě porušování prostoru.“</p>
+<p> Otevřenost: - dávkuji - podmiňuji reciprocitou</p>
+<p> Jakmile prostor není: ➡ zavírám se **bez viny**.</p>
+<h2>BEZPEČNÉ ZÓNY</h2>
+<p> Tohle jsou moje dobíjecí stanice: - práce s klienty - samota - ticho Nejsou to úniky. Jsou to nutné zdroje.</p>
+<h2>ZÁVĚREČNÁ VĚTA</h2>
+<p> > „Mým úkolem není naučit lidi respektu. > Mým úkolem je chránit svůj vnitřní prostor.“</p>
+<p> Když je překročena hranice, stačí ji pojmenovat. Nemusím ji obhajovat.</p>
+<p> Tento papír není slabost. Je to opora, dokud se nový režim nestane přirozeným.</p>
+
+        </article>
+
+        <section class="mt-16 p-8 rounded-3xl bg-gradient-to-b from-slate-900/50 to-slate-950 border border-white/5 text-center">
+            <h3 class="text-lg font-bold mb-6">Líbil se vám článek?</h3>
+            <div class="flex justify-center gap-4">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://vidimtojinak.cz/articles/022._monolog.html" target="_blank" class="share-btn px-5 py-2.5 rounded-xl flex items-center gap-2 text-sm font-semibold">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://vidimtojinak.cz/articles/022._monolog.html&text=Monolog" target="_blank" class="share-btn px-5 py-2.5 rounded-xl flex items-center gap-2 text-sm font-semibold">
+                    <span>X (Twitter)</span>
+                </a>
+                <button onclick="copyLink()" class="share-btn px-5 py-2.5 rounded-xl flex items-center gap-2 text-sm font-semibold">
+                    <span>Kopírovat odkaz</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="max-w-3xl mx-auto py-20 border-t border-white/5 mt-20">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-black text-white">Diskuze</h2>
+                <span class="px-3 py-1 rounded-full bg-blue-600/30 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider text-blue-300">Slušně, ale bez rukaviček</span>
+            </div>
+            
+            <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="b4bc4c08-f244-46e9-9aba-d36fc319dbba"
+                data-page-id="022._monolog.html"
+                data-page-url="https://vidimtojinak.cz/articles/022._monolog.html"
+                data-page-title="Monolog"
+                data-theme="dark"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </section>
+
+        <footer class="mt-10 pt-10 border-t border-white/5">
+            <div class="grid md:grid-cols-2 gap-8 items-center bg-blue-600/5 rounded-3xl p-8 border border-blue-500/10">
+                <div>
+                    <h4 class="text-blue-400 font-extrabold text-sm uppercase tracking-[0.2em] mb-3">O autorovi</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Jmenuji se <strong>Jan Šimek</strong> a bořím mýty o životě ve tmě. Moje články jsou syrové, upřímné a bez zbytečného patosu.
+                    </p>
+                </div>
+                <div class="flex justify-end">
+                    <a href="../index.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-2xl transition-all shadow-lg shadow-blue-900/20">
+                        Další články
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-sm bg-slate-900/95 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] shadow-2xl z-[100] hidden">
+        <h4 class="text-white font-extrabold mb-3 text-sm uppercase tracking-widest flex items-center gap-2">
+            <span>🍪</span> Využití cookies
+        </h4>
+        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+            Tento web používá Google Analytics pro anonymní měření návštěvnosti a platformu Cusdis pro provoz komentářů. Kliknutím na tlačítko souhlasíte s ukládáním těchto analytických a funkčních dat.
+        </p>
+        <button onclick="acceptCookies()" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-black uppercase tracking-widest py-4 rounded-xl transition-all">
+            Přijmout a pokračovat
+        </button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Odkaz byl zkopírován!');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        };
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        window.CUSDIS_LOCALE = {
+            "powered_by": "Běží na Cusdis",
+            "post_comment": "Odeslat komentář",
+            "placeholder": "Napište svůj komentář...",
+            "email": "E-mail (pro upozornění)",
+            "nickname": "Přezdívka",
+            "reply_to": "Odpovědět",
+            "cast_vote": "Hlasovat",
+            "submit": "Publikovat",
+            "loading": "Načítání..."
+        }
+    </script>
+</body>
+</html>
